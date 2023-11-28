@@ -17,7 +17,7 @@ resource "aws_subnet" "module_subnet" {
 
   # Define las etiquetas para la subnet, incluyendo las etiquetas 'Name' y 'Service Name'
   tags = merge(var.tags, {
-    "Name"         = "subnet-test-${var.environment}-${local.type}-${var.partial_name}"
+    "Name"         = "subnet-${var.environment}-${local.type}-${var.partial_name}"
     "Service Name" = "snet",
   })
 
